@@ -1,12 +1,90 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/reset.css">
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/todo.css" />
+    <link rel="stylesheet" href="./css/navigation-bar.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="todo-container">
+        <div class="todo-header">
+          <input type="text" class="text-input" />
+          <button>ADD</button>
+        </div>
+        <div class="todo-radio-wrapper">
+          <input type="radio" name="todo-complete" /><span>전체</span>
+          <input type="radio" name="todo-complete" /><span>미완료</span>
+          <input type="radio" name="todo-complete" value="완료" /><span
+            >완료</span
+          >
+        </div>
+        <div class="todolist-wrapper">
+          <ul class="all-todo-items">
+            <li class="todo-item">
+              <div class="todolist-inner-wrapper">
+                <input type="radio" class="todo-radio" />
+                <p class="todo-title">할일할일할일할일</p>
+                <span>
+                  <i class="fa-regular fa-pen-to-square icon-pad"></i>
+                </span>
+                <button class="grey-btn">DELETE</button>
+              </div>
+            </li>
+            <li class="todo-item">
+              <div class="todolist-inner-wrapper">
+                <input type="radio" class="todo-radio" />
+                <p class="todo-title">할일할일할일할일</p>
+                <span>
+                  <i class="fa-regular fa-pen-to-square icon-pad"></i>
+                </span>
+                <button class="grey-btn">DELETE</button>
+              </div>
+            </li>
+            <li class="todo-item">
+              <div class="todolist-inner-wrapper">
+                <input type="radio" class="todo-radio" />
+                <p class="todo-title">할일할일할일할일</p>
+                <span>
+                  <i class="fa-regular fa-pen-to-square icon-pad"></i>
+                </span>
+                <button class="grey-btn">DELETE</button>
+              </div>
+            </li>
+            <li class="todo-item">
+              <div class="todolist-inner-wrapper">
+                <input type="radio" class="todo-radio" />
+                <p class="todo-title">할일할일할일할일</p>
+                <span>
+                  <i class="fa-regular fa-pen-to-square icon-pad"></i>
+                </span>
+                <button class="grey-btn">DELETE</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="navigation-bar">
+        <div class="list-page-icon-wrapper">
+          <i class="fa-solid fa-list"></i>
+        </div>
+        <div class="calender-page-icon-wrapper kh-fo-co">
+          <i class="fa-regular fa-calendar-days"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
 </html>

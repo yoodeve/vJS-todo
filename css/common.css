@@ -1,0 +1,30 @@
+
+* {
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  max-width: 365px;
+  min-height: 612px; /* 812 */
+  margin: 20px auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+}
+
+.todo-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kh-fo-co {
+  font-weight: 300;
+  color: #C4C1A4 !important;
+}
+.icon-pad {
+  padding: 10px;
+}

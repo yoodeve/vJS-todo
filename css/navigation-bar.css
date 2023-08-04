@@ -1,0 +1,25 @@
+.navigation-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 365px;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 22px;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #FFF6DC;
+  background-color: #9E9FA5;
+}
+
+.navigation-bar div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.navigation-bar div:not(.navigation-bar div:nth-last-child(1)) {
+  border-right: 1px solid #eee;
+}
