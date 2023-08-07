@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/todo.css" />
     <link rel="stylesheet" href="./css/navigation-bar.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <link rel="stylesheet" href="./css/calendar.css" />
   </head>
   <body>
@@ -52,6 +53,22 @@
       </div>
       <!---------- page-todo ---------->
       <div class="todo-container none">
+        <div class="modal-background">
+          <div class="modal-container">
+            <div class="modal-header">
+              변경하기
+            </div>
+            <div class="modal-content">
+              <div class="modal-input-wrapper">
+                <input class="modal-input" type="text">
+              </div>
+            </div>
+            <div class="modal-button-wrapper">
+              <button class="grey-btn primary-button">SAVE</button>
+              <button class="grey-btn">CLOSE</button>
+            </div>
+          </div>
+        </div>
         <div class="todo-header">
           <input type="text" class="text-input" />
           <button class="grey-btn" onclick="addList()">ADD</button>

@@ -1,4 +1,3 @@
-
 const addList = () => {
   generateTodoObj();
 };
@@ -8,16 +7,20 @@ const generateTodoObj = () => {
   const todoObj = {
     id: 0,
     todoValue,
-    createDate: dayjs().format('YY-MM-DD'),
+    createDate: dayjs().format("YY-MM-DD"),
     complete: false,
   };
   todo.getInstance().addTodo(todoObj);
 };
 
+const removeItem = ({ value }) => {
+  todo.getInstance().delete(value);
+};
+
 class todo {
   static #ins = null;
   static getInstance() {
-    if(this.#ins === null) {
+    if (this.#ins === null) {
       this.#ins = new todo();
     }
     return this.#ins;
@@ -47,11 +50,11 @@ class todo {
     this.todoList.push(todoObject);
     this.updateTodoList();
     this.saveLocalStrg();
-    this.resetInputValue()
+    this.resetInputValue();
   }
 
   loadTodoList() {
-    console.log(JSON.parse(localStorage.getItem("list")))
+    console.log(JSON.parse(localStorage.getItem("list")));
     this.todoList = !!localStorage.getItem("list")
       ? JSON.parse(localStorage.getItem("list"))
       : [];
@@ -61,9 +64,9 @@ class todo {
   }
 
   updateTodoList() {
-    const todoContainer = document.querySelector('.all-todo-items');
+    const todoContainer = document.querySelector(".all-todo-items");
     todoContainer.innerHTML = "";
-    this.todoList?.map(todo => {
+    this.todoList?.map((todo) => {
       todoContainer.innerHTML += `
             <li class="todo-item">
               <div class="todolist-inner-wrapper">
@@ -76,9 +79,17 @@ class todo {
                 <span>
                   <i class="cursor fa-regular fa-pen-to-square icon-pad"></i>
                 </span>
-                <button class="grey-btn">DELETE</button>
+                <button class="grey-btn" onclick="removeItem(this)" value=${todo.id}>DELETE</button>
               </div>
             </li>`;
-    })
+    });
+  }
+
+  delete(id) {
+    this.todoList = this.todoList.filter((todo) => {
+      return todo.id !== parseInt(id);
+    });
+    this.updateTodoList();
+    this.saveLocalStrg();
   }
 }

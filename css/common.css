@@ -39,6 +39,7 @@
   background-color: #555;
   border: none;
   color: #fff;
+  border-radius: 2px;
 }
 .cursor {
   cursor: pointer;
@@ -49,4 +50,9 @@
 }
 .none {
   display: none !important;
+}
+.primary-button {
+  background-color: #eee !important;
+  border: 1px solid #444;
+  color: #444;
 }
