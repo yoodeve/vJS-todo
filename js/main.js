@@ -1,2 +1,4 @@
 /* main.js */
-// aaaaaa
+window.onload =() => {
+  todo.getInstance().updateTodoList();
+}

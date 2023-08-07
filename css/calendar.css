@@ -1,0 +1,36 @@
+.calendar-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 365px;
+  height: 100%;
+  padding: 20px 10px;
+}
+#calendar {
+  margin-bottom: 30px;
+}
+.fc-header-toolbar {
+  font-size: 12px;
+}
+.go-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: 900;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+}
+.go-btn:active {
+  background-color: #888;
+  line-height: 0px;
+  transition: all 0.5s ease-in-out;
+}

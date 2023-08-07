@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -11,80 +12,80 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- full calendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <!-- dayjs -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.9/dayjs.min.js"
+      integrity="sha512-q4Xn+ZU2K+dqJPL8a3TiyGsDa31IkR/rLt/w+fy8jLrx8TdXj0dLM1Aq4aPXnOOKxHEya/bD9DePDB2DHm4jJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- css files -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/todo.css" />
     <link rel="stylesheet" href="./css/navigation-bar.css" />
+    <link rel="stylesheet" href="./css/calendar.css" />
   </head>
   <body>
     <div id="root">
-      <div class="todo-container">
+      <!---------- page-calendar ---------->
+      <div class="calendar-container">
+        <div id="calendar" class="calendar-wrap"></div>
+        <div class="todolist-li-wrap">
+          <ul class="today-todo-list">
+            <li class="today-todo-item">투두1</li>
+            <li class="today-todo-item">투두2</li>
+          </ul>
+        </div>
+        <div onclick="floatBtnOnClick()" class="go-btn">
+          <b><i class="fa-solid fa-plus"></i></b>
+        </div>
+      </div>
+      <!---------- page-todo ---------->
+      <div class="todo-container none">
         <div class="todo-header">
           <input type="text" class="text-input" />
-          <button>ADD</button>
+          <button class="grey-btn" onclick="addList()">ADD</button>
         </div>
         <div class="todo-radio-wrapper">
           <input type="radio" name="todo-complete" /><span>전체</span>
           <input type="radio" name="todo-complete" /><span>미완료</span>
-          <input type="radio" name="todo-complete" value="완료" /><span
-            >완료</span
-          >
+          <input type="radio" name="todo-complete" /><span>완료</span>
         </div>
         <div class="todolist-wrapper">
-          <ul class="all-todo-items">
-            <li class="todo-item">
-              <div class="todolist-inner-wrapper">
-                <input type="radio" class="todo-radio" />
-                <p class="todo-title">할일할일할일할일</p>
-                <span>
-                  <i class="fa-regular fa-pen-to-square icon-pad"></i>
-                </span>
-                <button class="grey-btn">DELETE</button>
-              </div>
-            </li>
-            <li class="todo-item">
-              <div class="todolist-inner-wrapper">
-                <input type="radio" class="todo-radio" />
-                <p class="todo-title">할일할일할일할일</p>
-                <span>
-                  <i class="fa-regular fa-pen-to-square icon-pad"></i>
-                </span>
-                <button class="grey-btn">DELETE</button>
-              </div>
-            </li>
-            <li class="todo-item">
-              <div class="todolist-inner-wrapper">
-                <input type="radio" class="todo-radio" />
-                <p class="todo-title">할일할일할일할일</p>
-                <span>
-                  <i class="fa-regular fa-pen-to-square icon-pad"></i>
-                </span>
-                <button class="grey-btn">DELETE</button>
-              </div>
-            </li>
-            <li class="todo-item">
-              <div class="todolist-inner-wrapper">
-                <input type="radio" class="todo-radio" />
-                <p class="todo-title">할일할일할일할일</p>
-                <span>
-                  <i class="fa-regular fa-pen-to-square icon-pad"></i>
-                </span>
-                <button class="grey-btn">DELETE</button>
-              </div>
-            </li>
-          </ul>
+          <ul class="all-todo-items"></ul>
         </div>
       </div>
+      <!---------- nav bar ---------->
       <div class="navigation-bar">
-        <div class="list-page-icon-wrapper">
-          <i class="fa-solid fa-list"></i>
-        </div>
-        <div class="calender-page-icon-wrapper kh-fo-co">
+        <div
+          class="calender-page-icon-wrapper fo-light"
+          onclick="navMenuOnClick(this)"
+        >
           <i class="fa-regular fa-calendar-days"></i>
+        </div>
+        <div
+          class="list-page-icon-wrapper fo-dark"
+          onclick="navMenuOnClick(this)"
+        >
+          <i class="fa-solid fa-list"></i>
         </div>
       </div>
     </div>
 
     <script src="./js/main.js"></script>
+    <script src="./js/router.js"></script>
+    <script src="./js/navBar.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/calendar.js"></script>
   </body>
 </html>

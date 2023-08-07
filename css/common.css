@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
   font-size: 14px;
+  font-family: 'Hahmlet', serif;
 }
 
 #root {
@@ -20,11 +21,32 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
-.kh-fo-co {
+.fo-light {
   font-weight: 300;
-  color: #C4C1A4 !important;
+  color: #fff;
+}
+.fo-dark {
+  font-weight: 300;
+  color: #444 !important;
 }
 .icon-pad {
   padding: 10px;
+}
+.grey-btn {
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  background-color: #555;
+  border: none;
+  color: #fff;
+}
+.cursor {
+  cursor: pointer;
+}
+.text-input {
+  flex-grow: 1;
+  margin: 0 20px 0 0;
+}
+.none {
+  display: none !important;
 }

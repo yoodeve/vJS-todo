@@ -9,6 +9,7 @@
 .todo-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 10px;
 }
@@ -40,6 +41,39 @@
   padding: 10px 0;
   margin: 10px 0;
 }
+.todo-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .todo-title {
   flex-grow: 1;
+  word-break: break-all;
+}
+.todo-date {
+  margin-top: 5px;
+  font-size: 8px;
+  font-weight: 700;
+}
+.todo-radio {
+  display: none;
+}
+.todo-label {
+  line-height:5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px dotted #444;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.todo-radio:checked + .todo-label::after {
+  content: "✔";
+  font-size: 8px;
+  width: 15px;
+  font-weight: 900;
+  color: #000;
+}
+.todo-item .grey-btn {
+  margin-right: 5px;
 }
