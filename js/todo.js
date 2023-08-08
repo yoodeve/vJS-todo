@@ -74,7 +74,6 @@ class todo {
   }
 
   loadTodoList() {
-    console.log(JSON.parse(localStorage.getItem("list")));
     this.todoList = !!localStorage.getItem("list")
       ? JSON.parse(localStorage.getItem("list"))
       : [];
@@ -86,6 +85,10 @@ class todo {
   updateTodoList(todoArray) {
     const todoContainer = document.querySelector(".all-todo-items");
     todoContainer.innerHTML = "";
+    todoArray.sort((a, b)  => {
+      return dayjs(a.createDate) > dayjs(b.createDate) ? 1 : -1;
+      });
+      
     todoArray?.map((todo) => {
       todoContainer.innerHTML += `
             <li class="todo-item">
@@ -113,7 +116,6 @@ class todo {
                 }>DELETE</button>
               </div>
             </li>`;
-      console.log(this.todoList);
     });
   }
   getTodoById(id) {
