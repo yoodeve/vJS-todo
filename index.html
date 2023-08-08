@@ -40,12 +40,10 @@
     <div id="root">
       <!---------- page-calendar ---------->
       <div class="calendar-container">
+        <div class="logo-image-wrap"><div class="logo-image"></div></div>
         <div id="calendar" class="calendar-wrap"></div>
         <div class="todolist-li-wrap">
-          <ol class="today-todo-list">
-          </ol>
-        </div>
-        <div class="logo-image-wrap">
+          <ol class="today-todo-list"></ol>
         </div>
         <div onclick="floatBtnOnClick()" class="go-btn">
           <b><i class="fa-solid fa-plus"></i></b>
@@ -57,12 +55,18 @@
         <div class="modal-background none"></div>
         <!-- modal area end -->
         <div class="todo-header">
-          <input onkeyup="addListOnchange(event)" type="text" class="text-input" value="" placeholder="todo 입력..." />
+          <input
+            onkeyup="addListOnchange(event)"
+            type="text"
+            class="text-input"
+            value=""
+            placeholder="todo 입력..."
+          />
           <button class="grey-btn" onclick="addList()">ADD</button>
         </div>
         <div class="todo-radio-wrapper">
           <input
-          onchange="filterOnChange(this)"
+            onchange="filterOnChange(this)"
             type="radio"
             id="all-checkbox"
             name="todo-complete"
@@ -71,7 +75,7 @@
           />
           <label for="all-checkbox">전체</label>
           <input
-          onchange="filterOnChange(this)"
+            onchange="filterOnChange(this)"
             type="radio"
             id="uncom-checkbox"
             name="todo-complete"
@@ -79,7 +83,7 @@
           />
           <label for="uncom-checkbox">미완료</label>
           <input
-          onchange="filterOnChange(this)"
+            onchange="filterOnChange(this)"
             type="radio"
             id="com-checkbox"
             name="todo-complete"

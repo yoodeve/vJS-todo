@@ -29,6 +29,7 @@
   border-radius: 20px;
   background-color: whitesmoke;
   cursor: pointer;
+  border: 1px dotted #444;
 }
 .go-btn:active {
   background-color: #888;
@@ -52,8 +53,8 @@
   list-style: auto;
   margin: 5px 0;
 }
-.logo-image-wrap {
-  margin-top: 20px;
+.logo-image {
+  margin: 15px auto;
   height: 100px;
   width: 100%;
   overflow: hidden;
