@@ -1,5 +1,12 @@
 const addList = () => {
+  if(!document.querySelector(".todo-header .text-input").value) return;
   generateTodoObj();
+};
+const addListOnchange = (event) => {
+  if(event.keyCode ===13) {
+    generateTodoObj();
+  }
+  if(!document.querySelector(".todo-header .text-input").value) return;
 };
 
 const generateTodoObj = () => {

@@ -26,7 +26,7 @@
 }
 .todolist-wrapper {
   top: 110px;
-  height: 420px;
+  height: 620px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;

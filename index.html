@@ -45,6 +45,8 @@
           <ol class="today-todo-list">
           </ol>
         </div>
+        <div class="logo-image-wrap">
+        </div>
         <div onclick="floatBtnOnClick()" class="go-btn">
           <b><i class="fa-solid fa-plus"></i></b>
         </div>
@@ -55,7 +57,7 @@
         <div class="modal-background none"></div>
         <!-- modal area end -->
         <div class="todo-header">
-          <input type="text" class="text-input" value="" />
+          <input onkeyup="addListOnchange(event)" type="text" class="text-input" value="" placeholder="todo 입력..." />
           <button class="grey-btn" onclick="addList()">ADD</button>
         </div>
         <div class="todo-radio-wrapper">
