@@ -13,6 +13,11 @@
   margin: 20px auto 0 auto;
   position: relative;
 }
+@media (min-width:366px) {
+  #root {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
 
 .todo-container {
   position: relative;
