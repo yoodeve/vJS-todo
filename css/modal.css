@@ -26,12 +26,21 @@
 .modal-input {
   flex-grow: 1;
 }
+.icon-area {
+  width: 0;
+  height: 0;
+  background-color: #00000000;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
 .modal-button-wrapper {
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
-.modal-button-wrapper .grey-btn {
-  margin: 0 5px;
+.modal-button-wrapper .primary-button {
+  margin-right: 5px;
 }

@@ -19,6 +19,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  cursor: pointer;
 }
 .navigation-bar div:not(.navigation-bar div:nth-last-child(1)) {
   border-right: 1px solid #eee;
