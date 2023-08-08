@@ -3,13 +3,15 @@ const navMenuOnClick = (target) => {
   const listPage = document.querySelector(".list-page-icon-wrapper");
   switch (target.classList.contains("list-page-icon-wrapper")) {
     case false:
+      window.scrollTo(0,0);
       calendarPage.classList.add("fo-light");
       calendarPage.classList.remove("fo-dark");
       listPage.classList.add("fo-dark");
       listPage.classList.remove("fo-light");
       Routes.getInstance().routeState = "calendar";
       break;
-    case true:
+      case true:
+      window.scrollTo(0,0);
       listPage.classList.add("fo-light");
       listPage.classList.remove("fo-dark");
       calendarPage.classList.add("fo-dark");

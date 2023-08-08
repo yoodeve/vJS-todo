@@ -10,7 +10,7 @@
   height: 100%;
   max-width: 365px;
   min-height: 812px;
-  margin: 20px auto 0 auto;
+  margin: 0 auto;
   position: relative;
 }
 @media (min-width:366px) {

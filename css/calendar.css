@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .calendar-container {
   position: relative;
   display: flex;
