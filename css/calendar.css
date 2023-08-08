@@ -9,7 +9,7 @@
   padding: 20px 10px;
 }
 #calendar {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .fc-header-toolbar {
   font-size: 12px;
@@ -17,7 +17,7 @@
 .go-btn {
   position: absolute;
   right: 20px;
-  bottom: 0px;
+  top: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,4 +33,21 @@
   background-color: #888;
   line-height: 0px;
   transition: all 0.5s ease-in-out;
+}
+.today-todo-list {
+  height: 4.2rem;
+  overflow-y: auto;
+  padding: 0 40px;
+}
+.today-todo-list::-webkit-scrollbar {
+  width: 4px;
+}
+.today-todo-list::-webkit-scrollbar-thumb {
+  height: auto;
+  background-color: #9e9fa5;
+  border-radius: 10px;
+}
+.today-todo-list li {
+  list-style: auto;
+  margin: 5px 0;
 }

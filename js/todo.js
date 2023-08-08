@@ -7,7 +7,7 @@ const generateTodoObj = () => {
   const todoObj = {
     id: 0,
     todoValue,
-    createDate: dayjs().format("YY-MM-DD"),
+    createDate: dayjs().format("YYYY-MM-DD"),
     complete: false,
   };
   todo.getInstance().addTodo(todoObj);
