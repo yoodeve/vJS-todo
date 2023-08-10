@@ -24,10 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }</li>
         `);
       });
+      document.querySelector('.today-date-wrapper').innerHTML = `<p>${info.dateStr}의 할일</p>`;
     },
   });
   calendar.render();
-
+  document.querySelector('.today-date-wrapper').innerHTML = `<p>${todayDate}의 할일</p>`;
   const todayTodoArray = todo.getInstance().todoList.filter((todo) => {
     return todo.createDate === todayDate;
   });

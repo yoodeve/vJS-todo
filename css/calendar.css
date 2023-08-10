@@ -67,3 +67,6 @@ html {
 .underlined {
   text-decoration: line-through;
 }
+.today-date-wrapper p {
+  margin-left: 10px;
+}

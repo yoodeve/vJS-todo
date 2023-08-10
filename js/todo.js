@@ -86,7 +86,7 @@ class todo {
     const todoContainer = document.querySelector(".all-todo-items");
     todoContainer.innerHTML = "";
     todoArray.sort((a, b)  => {
-      return dayjs(a.createDate) > dayjs(b.createDate) ? 1 : -1;
+      return dayjs(a.createDate) < dayjs(b.createDate) ? 1 : -1;
       });
       
     todoArray?.map((todo) => {
