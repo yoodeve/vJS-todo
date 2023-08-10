@@ -34,4 +34,5 @@ const floatBtnOnClick = () => {
   document
     .querySelector(".calender-page-icon-wrapper")
     .classList.remove("fo-light");
+  document.querySelector('.todo-header input').focus();
 };

@@ -1,12 +1,12 @@
 const addList = () => {
-  if(!document.querySelector(".todo-header .text-input").value) return;
+  if (!document.querySelector(".todo-header .text-input").value) return;
   generateTodoObj();
 };
 const addListOnchange = (event) => {
-  if(event.keyCode ===13) {
+  if (!document.querySelector(".todo-header .text-input").value) return;
+  if (event.keyCode === 13) {
     generateTodoObj();
   }
-  if(!document.querySelector(".todo-header .text-input").value) return;
 };
 
 const generateTodoObj = () => {
@@ -68,6 +68,7 @@ class todo {
       id: this.todoIdx,
     };
     this.todoList.push(todoObject);
+    Calendar.getInstance().showStatus(this.todoList);
     this.updateTodoList(this.todoList);
     this.saveLocalStrg();
     this.resetInputValue();
@@ -85,10 +86,11 @@ class todo {
   updateTodoList(todoArray) {
     const todoContainer = document.querySelector(".all-todo-items");
     todoContainer.innerHTML = "";
-    todoArray.sort((a, b)  => {
+    todoArray.sort((a, b) => {
       return dayjs(a.createDate) < dayjs(b.createDate) ? 1 : -1;
-      });
-      
+    });
+    todoArray.reverse();
+
     todoArray?.map((todo) => {
       todoContainer.innerHTML += `
             <li class="todo-item">
@@ -129,6 +131,7 @@ class todo {
     });
     this.updateTodoList(this.todoList);
     this.saveLocalStrg();
+    Calendar.getInstance().showStatus(this.todoList);
   }
 
   changeTodo(todoObj) {
@@ -140,6 +143,7 @@ class todo {
     });
     this.saveLocalStrg();
     this.updateTodoList(this.todoList);
+    Calendar.getInstance().showStatus(this.todoList);
   }
 
   changeCompeltion(id, check) {
@@ -148,7 +152,7 @@ class todo {
         this.todoList[i].complete = check;
       }
     });
-
+    Calendar.getInstance().showStatus(this.todoList);
     this.saveLocalStrg();
   }
   filterStatus(value) {
