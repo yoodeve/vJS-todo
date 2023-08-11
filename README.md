@@ -1,5 +1,6 @@
 # TODO-APP
 HTML5, CSS3, JS(ES6 포함)만을 이용해 구성한 투두 앱입니다.
+[결과물 보기](https://yoodeve.github.io/vJS-todo/)
 
 # 작업기간
 - 2023.08.04~2023.08.08( MVP완성)<br>
