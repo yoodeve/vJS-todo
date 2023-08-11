@@ -36,7 +36,6 @@ class Calendar {
   }
 
   showStatus(todoArr) {
-    console.log("showStatus ===>>", todoArr)
     const todayList = document.querySelector(".today-todo-list");
     todoArr.reverse();
     todayList.innerHTML = "";
